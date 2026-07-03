@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="script.js">
+
+</head>
+
+<body class="bg-gray-100">
+    <div class="flex flex-col justify-center items-center w-80 mx-auto bg-gray-600 rounded-2xl shadow-lg  my-12">
+        <input id="input"
+            class="flex focus:outline-none bg-gray-800 w-64 py-5 rounded-2xl text-white  text-4xl mt-8 px-6 py-4 text-left "
+            readonly>
+
+        <div id="keys" class="grid grid-cols-4 gap-4 text-center mt-6  mx-7">
+            <button id="clear"
+                class="text-white p-3 text-center text-xl rounded-2xl hover:bg-gray-300  transition">AC</button>
+            <button id="sign" class="text-white  p-3 text-xl rounded-2xl hover:bg-gray-300 transition">+/-</button>
+            <button id="pourcentage" class="text-white  p-3 text-xl rounded-2xl hover:bg-gray-300 transition">%</button>
+            <button
+                class="text-white bg-orange-400 px-5 py-3 text-xl rounded-2xl hover:bg-orange-200 transition">÷</button>
+
+
+            <button class="text-white bg-gray-700 px-5 py-3 text-xl rounded-2xl hover:bg-gray-600 transition">7</button>
+            <button class="text-white bg-gray-700 px-5 py-3 text-xl rounded-2xl hover:bg-gray-600 transition">8</button>
+            <button class="text-white bg-gray-700 px-5 py-3 text-xl rounded-2xl hover:bg-gray-600 transition">9</button>
+            <button
+                class="text-white bg-orange-400 px-5 py-3 text-xl rounded-2xl hover:bg-orange-200 transition">×</button>
+
+
+            <button class="text-white bg-gray-700 px-5 py-3 text-xl rounded-2xl hover:bg-gray-600 transition">4</button>
+            <button class="text-white bg-gray-700 px-5 py-3 text-xl rounded-2xl hover:bg-gray-600 transition">5</button>
+            <button class="text-white bg-gray-700 px-5 py-3 text-xl rounded-2xl hover:bg-gray-600 transition">6</button>
+            <button
+                class="text-white bg-orange-400 px-5 py-3 text-xl rounded-2xl hover:bg-orange-200 transition">-</button>
+
+            <button class="text-white bg-gray-700 px-5 py-3 text-xl rounded-2xl hover:bg-gray-600 transition">1</button>
+            <button class="text-white bg-gray-700 px-5 py-3 text-xl rounded-2xl hover:bg-gray-600 transition">2</button>
+            <button class="text-white bg-gray-700 px-5 py-3 text-xl rounded-2xl hover:bg-gray-600 transition">3</button>
+            <button
+                class="text-white bg-orange-400 px-5 py-3 text-xl rounded-2xl hover:bg-orange-200 transition">+</button>
+
+
+            <button
+                class="text-white text-center col-span-2 bg-gray-700 px-5 py-3 text-xl rounded-2xl hover:bg-gray-600 transition mb-8">0</button>
+            <button
+                class="text-white bg-gray-700 px-5 py-3 text-xl rounded-2xl hover:bg-gray-600 transition mb-8">.</button>
+            <button id="equal"
+                class="text-white bg-orange-400 px-5 py-3 text-xl rounded-2xl hover:bg-orange-200 transition mb-8">=</button>
+
+
+        </div>
+</body>
+
+</html>
