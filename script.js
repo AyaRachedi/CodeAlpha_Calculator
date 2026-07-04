@@ -5,6 +5,8 @@ let input = document.querySelector("#input");
             let equal = document.querySelector("#equal");
             let clear = document.querySelector("#clear");
             let sign = document.querySelector("#sign");
+            const preview = document.querySelector("#preview");
+
 
 
             boutons.forEach((bouton) => {
@@ -13,9 +15,7 @@ let input = document.querySelector("#input");
                     //  appendToDisplay(valeur);
                     input.value += valeur;
                     bouton.blur();
-
-
-
+                        updatePreview();
 
                 });
             });
@@ -36,13 +36,29 @@ let input = document.querySelector("#input");
                 changSign();
             });
 
+            function updatePreview() {
+                try {
+                    const expr = input.value.replaceAll("×", "*").replaceAll("÷", "/");
+                    if (/[+\-*/.]$/.test(expr) || expr === "") {
+                        preview.textContent = "";
+                        return;
+                    }
+                    preview.textContent = "= " + eval(expr);
+                } catch {
+                    preview.textContent = "";
+                }
+            }
 
 
             function per() {
                 input.value = Number(input.value) / 100;
+                    updatePreview();
+
             }
             function changSign() {
                 input.value = -Number(input.value);
+                    updatePreview();
+
             }
             function appendToDisplay(val) {
                 input.value += val;
@@ -76,6 +92,8 @@ let input = document.querySelector("#input");
                 }
                 else if (e.key === "Backspace") {
                     input.value = input.value.slice(0, -1);
+                        updatePreview();
+
 
                 }
             });
